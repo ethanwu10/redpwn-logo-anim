@@ -349,7 +349,7 @@ export default function App() {
     setHasScrollbar(root.scrollHeight > root.clientHeight)
   }, [])
   const [isScrollLocked, setIsScrollLocked] = useState(true)
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (shouldAnimate === false) {
       setIsScrollLocked(false)
       setIsIn(true)
