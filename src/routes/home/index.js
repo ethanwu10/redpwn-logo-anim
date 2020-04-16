@@ -296,15 +296,6 @@ const pageVariants = {
       transition: pageTransition
     }
   },
-  wordCtfSpacer: {
-    initial: {
-      width: '0rem'
-    },
-    shown: {
-      width: '2rem',
-      transition: pageTransition
-    }
-  },
   wordCtfInner: {
     initial: {
       x: '-150%'
@@ -443,7 +434,6 @@ export default function App() {
             layoutId="logo"
           />
         </motion.div>
-        <motion.div variants={pageVariants.wordCtfSpacer} />
         <motion.div
           sx={{
             clipPath: 'polygon(-2rem 0%, 100% 0%, 100% 100%, -2rem 100%)',
@@ -453,7 +443,7 @@ export default function App() {
         >
           <Heading sx={{ fontSize: '4rem' }}>
             <motion.div
-              sx={{ display: 'inline-block' }}
+              sx={{ display: 'inline-block', marginLeft: '2rem' }}
               variants={pageVariants.wordCtfInner}
             >
               CTF
